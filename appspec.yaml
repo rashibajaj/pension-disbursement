@@ -1,0 +1,9 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:iam::140863333081:role/ecsTaskExecutionRole"
+        LoadBalancerInfo:
+          ContainerName: "pension-disbursement"
+          ContainerPort: "8084"
